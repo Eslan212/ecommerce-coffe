@@ -1,41 +1,38 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import BtnXl from "./components/BtnXl";
 import Carta from "./components/Card";
+import Banner from "./components/Banner";
+import { useEffect, useState } from "react";
 
+type Producto = {
+  id: number;
+  categoria: string;
+  name: string;
+  description: string;
+  imageUrl: string;
+  price: number;
+};
 
-
-const productos = [
-  {
-    id: 1,
-    name: "Café Clásico",
-    description:
-      "Café de alta calidad, recién molido y tostado para ofrecerte el mejor sabor en cada taza.",
-    imageUrl: "/productos/cafe1.jpg",
-    price: 9.99,
-  },
-  {
-    id: 2,
-    name: "Café Espresso",
-    description:
-      "Intenso y aromático, perfecto para los amantes del café fuerte y concentrado.",
-    imageUrl: "/productos/cafe2.jpeg",
-    price: 12.99,
-  },
-  {
-    id: 3,
-    name: "Café Descafeinado",
-    description:
-      "Disfruta del sabor del café sin la cafeína, ideal para cualquier momento del día.",
-    imageUrl: "/productos/cafe3.jpeg",
-    price: 10.99,
-  },
-];
 
 export default function Home() {
+
+
+
+  const [productos, setProductos] = useState<Producto[]>([]);   
+
+
+  useEffect(() => {
+    fetch("/productos.json")
+      .then((res) => res.json())
+      .then((data) => setProductos(data))
+      .catch((err) => console.error("Error al leer JSON:", err));
+  }, []);
+
   return (
     <main >
-      <section className="relative w-full mx-auto max-w-[1200px] min-h-[400px] max-h-[800px] h-[50vh] md:h-[80vh] flex items-center justify-start">
+      <section className="relative w-full mx-auto max-w-[1920px] min-h-[400px] max-h-[800px] h-[50vh] md:h-[80vh] flex items-center justify-start">
 
         <div className="relative w-full h-full flex items-center justify-start">
           <div className="absolute inset-0 z-0">
@@ -68,22 +65,25 @@ export default function Home() {
       </section>
 
 
+      <section className="max-w-[1920px] mx-auto p-4 bg-[#e0d2bfce]">
+        <h2 className="text-center mb-6 text-3xl font-bold">¿Por qué Elegirnos?</h2>
 
-
-      <section className="max-w-[1200px] mx-auto p-8 bg-[#faebd7ce]">
-        <h2 className="text-center mb-5 p-3 text-3xl font-bold">¿Por qué Elegirnos?</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
-          {productos.map((producto) => (
-            <li key={producto.id} className="w-full flex justify-center">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {productos.slice(0,4).map((producto) => (
+            <li key={producto.id} className="flex">
               <Carta
                 title={producto.name}
                 description={producto.description}
                 imageUrl={producto.imageUrl}
+                btnTitle="Ver más"
               />
             </li>
           ))}
         </ul>
+        <Banner/>
       </section>
+
+
 
     </main>
   );

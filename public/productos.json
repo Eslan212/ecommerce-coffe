@@ -1,0 +1,147 @@
+[
+    {
+      "id": 1,
+      "categoria": "Café",
+      "name": "Café Clásico",
+      "description": "Café de alta calidad, recién molido y tostado para ofrecerte el mejor sabor en cada taza.",
+      "imageUrl": "/productos/cafe1.jpg",
+      "price": 9.99
+    },
+    {
+      "id": 2,
+      "categoria": "Café",
+      "name": "Café Espresso",
+      "description": "Intenso y aromático, perfecto para los amantes del café fuerte y concentrado.",
+      "imageUrl": "/productos/cafe2.jpeg",
+      "price": 12.99
+    },
+    {
+      "id": 3,
+      "categoria": "Café",
+      "name": "Café Americano",
+      "description": "Suave y equilibrado, con un sabor clásico que nunca pasa de moda.",
+      "imageUrl": "/productos/cafe3.jpeg",
+      "price": 8.99
+    },
+    {
+      "id": 4,
+      "categoria": "Café",
+      "name": "Café Moka",
+      "description": "Una combinación irresistible de café y chocolate, ideal para los paladares dulces.",
+      "imageUrl": "/productos/cafe4.jpeg",
+      "price": 10.99
+    },
+    {
+      "id": 5,
+      "categoria": "Café",
+      "name": "Café Latte",
+      "description": "Una deliciosa mezcla de espresso con leche vaporizada y espuma suave.",
+      "imageUrl": "/productos/cafe4.jpeg",
+      "price": 11.99
+    },
+    {
+      "id": 6,
+      "categoria": "Café",
+      "name": "Café Cappuccino",
+      "description": "Clásico italiano con una espuma cremosa y un sabor inconfundible.",
+      "imageUrl": "/productos/cafe7.jpeg",
+      "price": 11.49
+    },
+    {
+      "id": 7,
+      "categoria": "Café",
+      "name": "Café Frappé",
+      "description": "Refrescante mezcla de café helado con crema, ideal para los días calurosos.",
+      "imageUrl": "/productos/cafe8.jpeg",
+      "price": 13.49
+    },
+    {
+      "id": 8,
+      "categoria": "Chocolate",
+      "name": "Chocolate Caliente",
+      "description": "Cremoso y espeso, preparado con cacao premium para un sabor intenso.",
+      "imageUrl": "/productos/choco1.jpeg",
+      "price": 9.49
+    },
+    {
+      "id": 9,
+      "categoria": "Chocolate",
+      "name": "Chocolate con Leche",
+      "description": "Delicioso chocolate suave con leche entera, ideal para acompañar con pan o pastes.",
+      "imageUrl": "/productos/choco2.jpeg",
+      "price": 8.99
+    },
+    {
+      "id": 10,
+      "categoria": "Chocolate",
+      "name": "Chocolate Amargo 70%",
+      "description": "Para los amantes del cacao puro, con un toque de amargor elegante.",
+      "imageUrl": "/productos/choco3.jpeg",
+      "price": 10.99
+    },
+    {
+      "id": 11,
+      "categoria": "Chocolate",
+      "name": "Chocolate con Canela",
+      "description": "Dulce y aromático, una combinación perfecta de cacao y especias naturales.",
+      "imageUrl": "/productos/choco4.jpeg",
+      "price": 9.99
+    },
+    {
+      "id": 12,
+      "categoria": "Chocolate",
+      "name": "Chocolate Blanco Cremoso",
+      "description": "Suave, dulce y lleno de sabor, ideal para acompañar tus postres favoritos.",
+      "imageUrl": "/productos/choco5.jpeg",
+      "price": 8.49
+    },
+    {
+      "id": 13,
+      "categoria": "Paste",
+      "name": "Paste de Manzana",
+      "description": "Relleno de manzana fresca con un toque de canela, crujiente y dorado por fuera.",
+      "imageUrl": "/productos/paste1.jpeg",
+      "price": 4.99
+    },
+    {
+      "id": 14,
+      "categoria": "Paste",
+      "name": "Paste de Chocolate",
+      "description": "Relleno con chocolate derretido, una delicia para acompañar con café.",
+      "imageUrl": "/productos/paste2.jpeg",
+      "price": 5.49
+    },
+    {
+      "id": 15,
+      "categoria": "Paste",
+      "name": "Paste de Carne",
+      "description": "Tradicional y sabroso, preparado con carne aliñada y masa casera.",
+      "imageUrl": "/productos/paste3.jpeg",
+      "price": 5.99
+    },
+    {
+      "id": 16,
+      "categoria": "Paste",
+      "name": "Croissant de Mantequilla",
+      "description": "Suave, hojaldrado y con el sabor clásico de la mantequilla francesa.",
+      "imageUrl": "/productos/paste4.jpeg",
+      "price": 4.49
+    },
+    {
+      "id": 17,
+      "categoria": "Paste",
+      "name": "Brownie de Chocolate",
+      "description": "Húmedo, denso y con trozos de chocolate derretido en su interior.",
+      "imageUrl": "/productos/paste5.jpeg",
+      "price": 6.49
+    },
+    {
+      "id": 18,
+      "categoria": "Paste",
+      "name": "Muffin de Arándanos",
+      "description": "Suave y esponjoso, con trozos reales de arándanos frescos.",
+      "imageUrl": "/productos/paste6.jpeg",
+      "price": 5.49
+    }
+  ]
+  
