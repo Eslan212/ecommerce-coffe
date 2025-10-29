@@ -7,8 +7,12 @@ import NavRedes from "../types/nav-redes";
 
 
 
+
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+
+
+
     return (
             <>
             <header className="w-full bg-[#FAEBD7] shadow-md">
