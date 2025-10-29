@@ -14,6 +14,7 @@ export default function Carta({ title, description, imageUrl, btnTitle }: CartaP
         src={imageUrl}
         alt={title}
         className="w-full h-48 object-cover"
+        loading="lazy"
       />
 
       <div className="p-6 flex flex-col justify-between flex-grow text-center">

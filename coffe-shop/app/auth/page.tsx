@@ -4,13 +4,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../hooks/AuthProvider";
 
-
 export default function AuthPage() {
   const router = useRouter();
   
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState(""); // <-- nuevo estado para el name
   const [message, setMessage] = useState("");
 
   const { login } = useAuth(); 
@@ -30,13 +30,14 @@ export default function AuthPage() {
       const res = await fetch(`http://localhost:3001/${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, ...(isLogin ? {} : { name }) }),
+        // si es login no mandamos name, si es register sí
       });
       const data = await res.json();
 
       if (data.access_token) {
         // Login exitoso
-        login(data.access_token); // ✅ actualiza el estado global
+        login(data.access_token);
         setMessage("¡Login exitoso!");
         router.push("/"); // redirige al home
       } else if (data.id) {
@@ -61,10 +62,22 @@ export default function AuthPage() {
         </h1>
 
         {message && (
-          <p className="mb-4 text-center text-sm text-red-500">{message}</p>
+         <p className="mb-4 text-center text-sm text-red-500 h-5">
+         {message || ""}
+         </p>
         )}
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          {!isLogin && (
+            <input
+              type="text"
+              placeholder="Nombre"
+              className="border p-3 rounded"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          )}
           <input
             type="email"
             placeholder="Email"

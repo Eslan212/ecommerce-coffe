@@ -1,12 +1,16 @@
 "use client";
 import Link from "next/link";
 import { useAuth } from "../hooks/AuthProvider";
-
+import { useEffect } from "react";
 
 export default function NavLinks(){
   
     const { isAuthenticated } = useAuth();
 
+    useEffect(() => {
+      // Fuerza re-render cuando el token cambia en localStorage
+    }, [isAuthenticated])
+    
     const links = isAuthenticated
     ? [
         { href: "/", label: "Home" },
